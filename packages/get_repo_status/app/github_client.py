@@ -206,10 +206,12 @@ class GithubDataClient:
             return stripped
         return None
 
-    def get_latest_prod_tag(self, repo: Repo) -> Tuple[Optional[str], Optional[str]]:  # noqa: C901
+    def get_latest_environment_tag(  # noqa: C901
+        self, repo: Repo, environment: str
+    ) -> Tuple[Optional[str], Optional[str]]:
         repo_name = repo["repoUrl"]
-        prod_tag_files = repo.get("prodTagFiles") or []
-        if not prod_tag_files:
+        release_suffixes = repo.get("releaseFiles") or []
+        if not release_suffixes:
             return None, None
 
         gh_repo = self._safe_get_repo(repo_name)
@@ -219,8 +221,9 @@ class GithubDataClient:
         tags: List[str] = []
         release_entries: List[ReleaseEntry] = []
 
-        for file_name in prod_tag_files:
-            entry = self._load_prod_tag_entry(gh_repo, repo_name, file_name)
+        for suffix in release_suffixes:
+            file_name = f"{environment}{suffix}"
+            entry = self._load_release_entry(gh_repo, repo_name, file_name)
             if entry is None:
                 return None, None
             prod_tag, release_entry = entry
@@ -291,7 +294,7 @@ class GithubDataClient:
             print(f"Error loading repository {repo_name}: {exc}")
             return None
 
-    def _read_prod_tag_first_row(
+    def _read_release_file_first_row(
         self, gh_repo: Any, repo_name: str, file_name: str
     ) -> Optional[Dict[str, Optional[str]]]:
         path = f"_data/{file_name}"
@@ -312,8 +315,8 @@ class GithubDataClient:
             print(f"Error parsing {path} for {repo_name}: {exc}")
             return None
 
-    def _load_prod_tag_entry(self, gh_repo: Any, repo_name: str, file_name: str) -> Optional[Tuple[str, ReleaseEntry]]:
-        first_row = self._read_prod_tag_first_row(gh_repo, repo_name, file_name)
+    def _load_release_entry(self, gh_repo: Any, repo_name: str, file_name: str) -> Optional[Tuple[str, ReleaseEntry]]:
+        first_row = self._read_release_file_first_row(gh_repo, repo_name, file_name)
         if not first_row:
             return None
         prod_tag_raw = first_row.get("tag") or ""

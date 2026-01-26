@@ -6,8 +6,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "master",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -17,8 +17,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -28,7 +28,7 @@
     "releaseWorkflow": "continuous-integration.yml",
     "mainBranch": "master",
     "inWeeklyRelease": true,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-account-resources",
@@ -37,14 +37,14 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod-account_account-resources_latest.csv",
-      "prod-account_secrets_latest.csv",
-      "prod-ci_ci-resources_latest.csv",
-      "prod-lambda_lambda-resources_latest.csv",
-      "prod-account_monitoring_eu-west-2_latest.csv",
-      "prod-account_account-resources-cdk-us_us-east-1_latest.csv",
-      "prod-account_account-resources-cdk-uk_eu-west-2_latest.csv"
+    "releaseFiles": [
+      "-account_account-resources_latest.csv",
+      "-account_secrets_latest.csv",
+      "-ci_ci-resources_latest.csv",
+      "-lambda_lambda-resources_latest.csv",
+      "-account_monitoring_eu-west-2_latest.csv",
+      "-account_account-resources-cdk-us_us-east-1_latest.csv",
+      "-account_account-resources-cdk-uk_eu-west-2_latest.csv"
     ]
   },
   {
@@ -54,8 +54,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -65,8 +65,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -76,8 +76,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -87,8 +87,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -98,7 +98,7 @@
     "releaseWorkflow": "merge_to_main.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-release-notes",
@@ -107,7 +107,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-get-secrets",
@@ -116,7 +116,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/nhs-fhir-middy-error-handler",
@@ -125,7 +125,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/nhs-eps-spine-client",
@@ -134,7 +134,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/eps-load-test",
@@ -143,7 +143,7 @@
     "releaseWorkflow": "NONE",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-api-regression-tests",
@@ -152,7 +152,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/eps-aws-dashboards",
@@ -161,8 +161,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -172,7 +172,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/eps-cdk-utils",
@@ -181,7 +181,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/eps-assist-me",
@@ -190,8 +190,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -201,8 +201,8 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": true,
-    "prodTagFiles": [
-      "prod_latest.csv"
+    "releaseFiles": [
+      "_latest.csv"
     ]
   },
   {
@@ -212,7 +212,7 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   },
   {
     "repoUrl": "NHSDigital/eps-spine-shared",
@@ -221,6 +221,6 @@
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
     "inWeeklyRelease": false,
-    "prodTagFiles": []
+    "releaseFiles": []
   }
 ]

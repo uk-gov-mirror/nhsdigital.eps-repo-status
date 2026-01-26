@@ -238,7 +238,7 @@ def test_get_asdf_version_returns_first_non_comment_line(client: GithubDataClien
     assert version == "0.12.3"
 
 
-def test_get_latest_prod_tag_returns_latest_release_datetime(
+def test_get_latest_environment_tag_returns_latest_release_datetime(
     client: GithubDataClient, github_client: MagicMock, repo_factory
 ) -> None:
     gh_repo = MagicMock()
@@ -254,19 +254,22 @@ def test_get_latest_prod_tag_returns_latest_release_datetime(
     gh_repo.get_contents.side_effect = _get_contents
     github_client.get_repo.return_value = gh_repo
 
-    tag, released_at = client.get_latest_prod_tag(repo_factory(prodTagFiles=["prod.csv", "prod_extra.csv"]))
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=[".csv", "_extra.csv"]),
+        "prod",
+    )
 
     assert tag == "v1.2.3"
     assert released_at == "2024-01-12T09:00:00Z"
 
 
-def test_get_latest_prod_tag_detects_inconsistent_tags(
+def test_get_latest_environment_tag_detects_inconsistent_tags(
     client: GithubDataClient, github_client: MagicMock, repo_factory
 ) -> None:
     gh_repo = MagicMock()
     content_map = {
-        "_data/first.csv": "tag,release_datetime\nv1.2.3,2024-01-10T09:00:00Z\n",
-        "_data/second.csv": "tag,release_datetime\nv2.0.0,2024-01-11T11:00:00Z\n",
+        "_data/prod_first.csv": "tag,release_datetime\nv1.2.3,2024-01-10T09:00:00Z\n",
+        "_data/prod_second.csv": "tag,release_datetime\nv2.0.0,2024-01-11T11:00:00Z\n",
     }
 
     def _get_contents(path, ref):
@@ -276,50 +279,62 @@ def test_get_latest_prod_tag_detects_inconsistent_tags(
     gh_repo.get_contents.side_effect = _get_contents
     github_client.get_repo.return_value = gh_repo
 
-    tag, released_at = client.get_latest_prod_tag(repo_factory(prodTagFiles=["first.csv", "second.csv"]))
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=["_first.csv", "_second.csv"]),
+        "prod",
+    )
 
     assert tag == "Inconsistent released tags"
     assert released_at is None
 
 
-def test_get_latest_prod_tag_returns_none_when_repo_load_fails(
+def test_get_latest_environment_tag_returns_none_when_repo_load_fails(
     client: GithubDataClient, github_client: MagicMock, repo_factory
 ) -> None:
     github_client.get_repo.side_effect = Exception("boom")
 
-    tag, released_at = client.get_latest_prod_tag(repo_factory(prodTagFiles=["prod.csv"]))
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=[".csv"]),
+        "prod",
+    )
 
     assert tag is None
     assert released_at is None
 
 
-def test_get_latest_prod_tag_returns_none_when_file_fetch_fails(
+def test_get_latest_environment_tag_returns_none_when_file_fetch_fails(
     client: GithubDataClient, github_client: MagicMock, repo_factory
 ) -> None:
     gh_repo = MagicMock()
     gh_repo.get_contents.side_effect = make_github_exception(500)
     github_client.get_repo.return_value = gh_repo
 
-    tag, released_at = client.get_latest_prod_tag(repo_factory(prodTagFiles=["prod.csv"]))
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=[".csv"]),
+        "prod",
+    )
 
     assert tag is None
     assert released_at is None
 
 
-def test_get_latest_prod_tag_returns_none_when_file_is_empty(
+def test_get_latest_environment_tag_returns_none_when_file_is_empty(
     client: GithubDataClient, github_client: MagicMock, repo_factory
 ) -> None:
     gh_repo = MagicMock()
     gh_repo.get_contents.return_value = SimpleNamespace(decoded_content="tag,release_datetime\n".encode("utf-8"))
     github_client.get_repo.return_value = gh_repo
 
-    tag, released_at = client.get_latest_prod_tag(repo_factory(prodTagFiles=["prod.csv"]))
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=[".csv"]),
+        "prod",
+    )
 
     assert tag is None
     assert released_at is None
 
 
-def test_get_latest_prod_tag_returns_none_when_tag_missing(
+def test_get_latest_environment_tag_returns_none_when_tag_missing(
     client: GithubDataClient, github_client: MagicMock, repo_factory
 ) -> None:
     gh_repo = MagicMock()
@@ -328,7 +343,10 @@ def test_get_latest_prod_tag_returns_none_when_tag_missing(
     )
     github_client.get_repo.return_value = gh_repo
 
-    tag, released_at = client.get_latest_prod_tag(repo_factory(prodTagFiles=["prod.csv"]))
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=[".csv"]),
+        "prod",
+    )
 
     assert tag is None
     assert released_at is None

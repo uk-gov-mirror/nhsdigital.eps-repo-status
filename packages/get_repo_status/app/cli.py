@@ -46,7 +46,11 @@ def main(argv: List[str] | None = None) -> None:
         release_status, release_url = client.get_workflow_status(repo, repo["releaseWorkflow"])
         check_runs, combined_check_runs_status = client.get_latest_status(repo)
         latest_release = client.get_latest_release(repo)
-        latest_prod_tag, latest_prod_release_datetime = client.get_latest_prod_tag(repo)
+        latest_dev_tag, latest_dev_release_datetime = client.get_latest_environment_tag(repo, "dev")
+        latest_qa_tag, latest_qa_release_datetime = client.get_latest_environment_tag(repo, "qa")
+        latest_ref_tag, latest_ref_release_datetime = client.get_latest_environment_tag(repo, "ref")
+        latest_int_tag, latest_int_release_datetime = client.get_latest_environment_tag(repo, "int")
+        latest_prod_tag, latest_prod_release_datetime = client.get_latest_environment_tag(repo, "prod")
         unreleased_tags = client.get_unreleased_tags(repo, latest_prod_tag)
         tool_versions = client.get_tool_versions(repo)
         asdf_version = client.get_asdf_version(repo)
@@ -78,6 +82,14 @@ def main(argv: List[str] | None = None) -> None:
                 "latest_release_published_at": latest_release["published_at"],
                 "latest_prod_tag": latest_prod_tag,
                 "latest_prod_release_datetime": latest_prod_release_datetime,
+                "latest_dev_tag": latest_dev_tag,
+                "latest_dev_release_datetime": latest_dev_release_datetime,
+                "latest_qa_tag": latest_qa_tag,
+                "latest_qa_release_datetime": latest_qa_release_datetime,
+                "latest_ref_tag": latest_ref_tag,
+                "latest_ref_release_datetime": latest_ref_release_datetime,
+                "latest_int_tag": latest_int_tag,
+                "latest_int_release_datetime": latest_int_release_datetime,
                 "unreleased_tags": unreleased_tags,
                 "tool_version_nodejs": tool_versions.get("nodejs"),
                 "tool_version_python": tool_versions.get("python"),
