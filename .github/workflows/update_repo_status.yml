@@ -53,7 +53,7 @@ jobs:
       - name: make install
         run: |
           make install
-      - name: Generate a token to authenticate regression testing
+      - name: Generate a token to get details from other repositories
         id: generate-token
         uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf
         with:
