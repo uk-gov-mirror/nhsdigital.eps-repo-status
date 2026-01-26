@@ -1,0 +1,226 @@
+[
+  {
+    "repoUrl": "NHSDigital/electronic-prescription-service-api",
+    "friendlyName": "fhir facade API",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "master",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/prescriptionsforpatients",
+    "friendlyName": "prescriptions for patients - AWS",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/prescriptions-for-patients",
+    "friendlyName": "prescriptions for patients - apigee",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "continuous-integration.yml",
+    "mainBranch": "master",
+    "inWeeklyRelease": true,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/electronic-prescription-service-account-resources",
+    "friendlyName": "account resources",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod-account_account-resources_latest.csv",
+      "prod-account_secrets_latest.csv",
+      "prod-ci_ci-resources_latest.csv",
+      "prod-lambda_lambda-resources_latest.csv",
+      "prod-account_monitoring_eu-west-2_latest.csv",
+      "prod-account_account-resources-cdk-us_us-east-1_latest.csv",
+      "prod-account_account-resources-cdk-uk_eu-west-2_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/eps-prescription-status-update-api",
+    "friendlyName": "prescription status update API",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/electronic-prescription-service-clinical-prescription-tracker",
+    "friendlyName": "clinical prescription tracker api",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/eps-prescription-tracker-ui",
+    "friendlyName": "clinical prescription tracker ui",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/eps-FHIR-validator-lambda",
+    "friendlyName": "fhir validator lambda",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/validation-service-fhir-r4",
+    "friendlyName": "fhir validator docker",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "merge_to_main.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/electronic-prescription-service-release-notes",
+    "friendlyName": "release notes",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/electronic-prescription-service-get-secrets",
+    "friendlyName": "get secrets",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/nhs-fhir-middy-error-handler",
+    "friendlyName": "fhir middy error handler",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/nhs-eps-spine-client",
+    "friendlyName": "eps spine client",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/eps-load-test",
+    "friendlyName": "eps load test",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "NONE",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/electronic-prescription-service-api-regression-tests",
+    "friendlyName": "eps regression test",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/eps-aws-dashboards",
+    "friendlyName": "eps aws dashboards",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/eps-storage-terraform",
+    "friendlyName": "eps storage terraform",
+    "ciWorkflow": "merge.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/eps-cdk-utils",
+    "friendlyName": "eps cdk utils",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/eps-assist-me",
+    "friendlyName": "eps assist me",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/eps-vpc-resources",
+    "friendlyName": "eps vpc resources",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "prodTagFiles": [
+      "prod_latest.csv"
+    ]
+  },
+  {
+    "repoUrl": "NHSDigital/eps-common-workflows",
+    "friendlyName": "eps common workflows",
+    "ciWorkflow": "NONE",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  },
+  {
+    "repoUrl": "NHSDigital/eps-spine-shared",
+    "friendlyName": "eps spine shared",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": false,
+    "prodTagFiles": []
+  }
+]
