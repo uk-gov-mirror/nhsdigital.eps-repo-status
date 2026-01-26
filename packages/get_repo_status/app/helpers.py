@@ -43,7 +43,7 @@ def write_to_json(output_path: Union[str, Path], data: List[Dict[str, Any]]) -> 
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
     payload = {
-        "generated_date_time": isoformat_no_tz(datetime.now(timezone.utc)),
+        "generated_date_time": isoformat_no_tz(datetime.now(timezone.utc).replace(microsecond=0)),
         "repos": data,
     }
     with output.open("w", encoding="utf-8") as jsonfile:
