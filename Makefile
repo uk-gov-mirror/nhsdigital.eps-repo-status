@@ -9,6 +9,7 @@ sync-main:
 	git checkout main pyproject.toml
 	git checkout main poetry.lock
 	git checkout main poetry.lock
+	git checkout main .gitallowed
 	# git checkout main package.json
 	# git checkout main package-lock.json
 
