@@ -1,6 +1,8 @@
 EPS REPO STATUS
 ================
 
+Users with access can view the reports by going to: [https://nhsdigital.github.io/eps-repo-status](https://nhsdigital.github.io/eps-repo-status)
+
 ## Requirements
 
 - Python as configured by Poetry (see `pyproject.toml`).
