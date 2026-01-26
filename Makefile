@@ -1,6 +1,8 @@
 run-jekyll:
 	bundle exec jekyll serve
 
+ build-gh-pages:
+	bundle exec jekyll build -d _site
 sync-main:
 	git checkout main .tool-versions
 	git checkout main .pre-commit-config.yaml
