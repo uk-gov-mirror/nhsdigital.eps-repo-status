@@ -1,0 +1,125 @@
+---
+layout: page
+---
+<h1>Repo Status <span class="repo-status-updated">(Updated {{ site.data.repo_status.generated_date_time }})</span></h1>
+<div class="repo-status-table-wrapper">
+<table class="repo-status-table" data-sortable="true">
+  <thead>
+    <tr>
+      <th scope="col" data-sort-type="string">Repo</th>
+      <th scope="col" data-sort-type="numeric">Non dependabot open PRs</th>
+      <th scope="col" data-sort-type="numeric">Dependabot open PRs</th>
+      <th scope="col" data-sort-type="numeric">Critical dependabot alerts</th>
+      <th scope="col" data-sort-type="numeric">High dependabot alerts</th>
+      <th scope="col" data-sort-type="numeric">Medium dependabot alerts</th>
+      <th scope="col" data-sort-type="numeric">Low dependabot alerts</th>
+      <th scope="col" data-sort-type="numeric">Critical code scanning alerts</th>
+      <th scope="col" data-sort-type="numeric">High code scanning alerts</th>
+      <th scope="col" data-sort-type="numeric">Medium code scanning alerts</th>
+      <th scope="col" data-sort-type="numeric">Low code scanning alerts</th>
+      <th scope="col" data-sort-type="string">Latest commit status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for repo in site.data.repo_status.repos %}
+    {% assign has_high_alerts = false %}
+    {% if repo.critical_dependabot_alerts > 0 or repo.high_dependabot_alerts > 0 or repo.critical_code_scanning_alerts > 0 or repo.high_code_scanning_alerts > 0 or repo.latest_commit_combined_check_runs_status == "failure" %}
+        {% assign has_high_alerts = true %}
+    {% endif %}
+  <tr{% if has_high_alerts %} class="repo-status-alert"{% endif %}>
+    <td><a href=https://github.com/{{repo.repo_url}}>{{ repo.friendly_name }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/pulls?q=is%3Apr+is%3Aopen+-label%3Adependencies>{{ repo.non_dependabot_open_pull_requests }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/pulls?q=is%3Apr+is%3Aopen+label%3Adependencies>{{ repo.dependabot_open_pull_requests }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/dependabot>{{ repo.critical_dependabot_alerts }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/dependabot>{{ repo.high_dependabot_alerts }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/dependabot>{{ repo.medium_dependabot_alerts }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/dependabot>{{ repo.low_dependabot_alerts }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/code-scanning>{{ repo.critical_code_scanning_alerts }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/code-scanning>{{ repo.high_code_scanning_alerts }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/code-scanning>{{ repo.medium_code_scanning_alerts }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/security/code-scanning>{{ repo.low_code_scanning_alerts }}</a></td>
+    <td>
+      {{ repo.latest_commit_combined_check_runs_status }}
+      {% if repo.latest_commit_combined_check_runs_status == "failure" %}
+        {% assign failing_runs = repo.latest_commit_check_runs | where: "conclusion", "failure" %}
+        {% if failing_runs and failing_runs.size > 0 %}
+          <div class="repo-status-failing-runs">
+            {% for run in failing_runs %}
+              <a href="{{ run.status_url }}">{{ run.name }}</a>{% unless forloop.last %}<br>{% endunless %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const table = document.querySelector('.repo-status-table[data-sortable]');
+  if (!table || !table.tBodies.length) {
+    return;
+  }
+
+  const headers = table.querySelectorAll('thead th[data-sort-type]');
+  const tbody = table.tBodies[0];
+
+  headers.forEach((header, index) => {
+    header.tabIndex = 0;
+    header.setAttribute('role', 'button');
+    header.setAttribute('aria-sort', 'none');
+    header.addEventListener('click', () => handleSort(header, index));
+    header.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleSort(header, index);
+      }
+    });
+  });
+
+  function handleSort(header, columnIndex) {
+    const sortType = header.dataset.sortType || 'string';
+    const order = header.dataset.sortOrder === 'asc' ? 'desc' : 'asc';
+
+    headers.forEach((th) => {
+      if (th === header) {
+        return;
+      }
+      th.removeAttribute('data-sort-order');
+      th.setAttribute('aria-sort', 'none');
+    });
+
+    header.dataset.sortOrder = order;
+    header.setAttribute('aria-sort', order === 'asc' ? 'ascending' : 'descending');
+
+    const rows = Array.from(tbody.rows);
+    rows.sort((a, b) => compareCells(a.cells[columnIndex], b.cells[columnIndex], sortType, order));
+    rows.forEach((row) => tbody.appendChild(row));
+  }
+
+  function compareCells(cellA, cellB, sortType, order) {
+    const aValue = getCellValue(cellA);
+    const bValue = getCellValue(cellB);
+
+    if (sortType === 'numeric') {
+      const aNum = parseFloat(aValue);
+      const bNum = parseFloat(bValue);
+
+      if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) {
+        return order === 'asc' ? aNum - bNum : bNum - aNum;
+      }
+    }
+
+    return order === 'asc'
+      ? aValue.localeCompare(bValue, undefined, { numeric: true, sensitivity: 'base' })
+      : bValue.localeCompare(aValue, undefined, { numeric: true, sensitivity: 'base' });
+  }
+
+  function getCellValue(cell) {
+    return cell ? cell.textContent.trim() : '';
+  }
+});
+</script>

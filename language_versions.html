@@ -1,0 +1,95 @@
+---
+layout: page
+---
+<h1>Language versions <span class="repo-status-updated">(Updated {{ site.data.repo_status.generated_date_time }})</span></h1>
+<div class="repo-status-table-wrapper">
+<table class="repo-status-table" data-sortable="true">
+  <thead>
+    <tr>
+      <th scope="col" data-sort-type="string">Repo</th>
+      <th scope="col" data-sort-type="numeric">Nodejs version</th>
+      <th scope="col" data-sort-type="numeric">Python version</th>
+      <th scope="col" data-sort-type="numeric">Poetry version</th>
+      <th scope="col" data-sort-type="numeric">asdf version</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for repo in site.data.repo_status.repos %}
+  <tr>
+    <td><a href=https://github.com/{{repo.repo_url}}>{{ repo.friendly_name }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/.tool-versions>{{ repo.tool_version_nodejs }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/.tool-versions>{{ repo.tool_version_python }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/.tool-versions>{{ repo.tool_version_poetry }}</a></td>
+    <td><a href=https://github.com/{{repo.repo_url}}/.tool-versions.asdf>{{ repo.asdf_version }}</a></td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const table = document.querySelector('.repo-status-table[data-sortable]');
+  if (!table || !table.tBodies.length) {
+    return;
+  }
+
+  const headers = table.querySelectorAll('thead th[data-sort-type]');
+  const tbody = table.tBodies[0];
+
+  headers.forEach((header, index) => {
+    header.tabIndex = 0;
+    header.setAttribute('role', 'button');
+    header.setAttribute('aria-sort', 'none');
+    header.addEventListener('click', () => handleSort(header, index));
+    header.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleSort(header, index);
+      }
+    });
+  });
+
+  function handleSort(header, columnIndex) {
+    const sortType = header.dataset.sortType || 'string';
+    const order = header.dataset.sortOrder === 'asc' ? 'desc' : 'asc';
+
+    headers.forEach((th) => {
+      if (th === header) {
+        return;
+      }
+      th.removeAttribute('data-sort-order');
+      th.setAttribute('aria-sort', 'none');
+    });
+
+    header.dataset.sortOrder = order;
+    header.setAttribute('aria-sort', order === 'asc' ? 'ascending' : 'descending');
+
+    const rows = Array.from(tbody.rows);
+    rows.sort((a, b) => compareCells(a.cells[columnIndex], b.cells[columnIndex], sortType, order));
+    rows.forEach((row) => tbody.appendChild(row));
+  }
+
+  function compareCells(cellA, cellB, sortType, order) {
+    const aValue = getCellValue(cellA);
+    const bValue = getCellValue(cellB);
+
+    if (sortType === 'numeric') {
+      const aNum = parseFloat(aValue);
+      const bNum = parseFloat(bValue);
+
+      if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) {
+        return order === 'asc' ? aNum - bNum : bNum - aNum;
+      }
+    }
+
+    return order === 'asc'
+      ? aValue.localeCompare(bValue, undefined, { numeric: true, sensitivity: 'base' })
+      : bValue.localeCompare(aValue, undefined, { numeric: true, sensitivity: 'base' });
+  }
+
+  function getCellValue(cell) {
+    return cell ? cell.textContent.trim() : '';
+  }
+});
+</script>

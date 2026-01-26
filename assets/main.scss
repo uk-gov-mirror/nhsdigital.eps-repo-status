@@ -1,0 +1,58 @@
+---
+---
+
+@import "minima";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #383838;
+}
+
+.repo-status-table-wrapper {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 0 1rem;
+}
+
+.repo-status-table {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.repo-status-table thead th[data-sort-type] {
+    cursor: pointer;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 9rem;
+}
+
+.repo-status-table thead th[data-sort-type]:focus-visible {
+    outline: 2px solid #005eb8;
+    outline-offset: 2px;
+}
+
+.repo-status-table thead th[data-sort-order="asc"]::after {
+    content: " ^";
+    font-size: 0.75rem;
+}
+
+.repo-status-table thead th[data-sort-order="desc"]::after {
+    content: " v";
+    font-size: 0.75rem;
+}
+
+.repo-status-table tr.repo-status-alert {
+    background-color: #ffe5e5 !important;
+    color: #7a0010;
+}
+
+.repo-status-table tr.repo-status-alert a {
+    color: inherit;
+    font-weight: 600;
+}
