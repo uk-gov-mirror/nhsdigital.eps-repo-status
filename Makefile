@@ -25,4 +25,7 @@ lint-github-actions:
 	actionlint
 
 run-get-repo-status:
-	poetry run python scripts/run_repo_status.py --output /tmp/repo_status_export.json
+	GITHUB_TOKEN=`gh auth token` poetry run python scripts/run_repo_status.py --output /tmp/repo_status_export.json
+
+github-login:
+	gh auth login
