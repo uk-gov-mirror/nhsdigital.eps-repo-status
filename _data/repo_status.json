@@ -1,5 +1,5 @@
 {
-  "generated_date_time": "2026-01-27T11:14:40",
+  "generated_date_time": "2026-01-27T11:23:10",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
@@ -423,7 +423,7 @@
     {
       "repo_url": "NHSDigital/prescriptionsforpatients",
       "friendly_name": "prescriptions for patients - AWS",
-      "non_dependabot_open_pull_requests": 6,
+      "non_dependabot_open_pull_requests": 7,
       "dependabot_open_pull_requests": 0,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 0,
@@ -692,7 +692,7 @@
       "low_code_scanning_alerts": 0,
       "ci_workflow_status": "waiting",
       "ci_workflow_url": "https://github.com/NHSDigital/electronic-prescription-service-account-resources/actions/runs/21318011372",
-      "release_workflow_status": "in_progress",
+      "release_workflow_status": "failure",
       "release_workflow_url": "https://github.com/NHSDigital/electronic-prescription-service-account-resources/actions/runs/21256928807",
       "latest_commit_check_runs": [
         {
@@ -1108,8 +1108,8 @@
       "latest_release_name": "v1.6.3",
       "latest_release_url": "https://github.com/NHSDigital/electronic-prescription-service-account-resources/releases/tag/v1.6.3",
       "latest_release_published_at": "2026-01-22T16:54:04",
-      "latest_prod_tag": "Inconsistent released tags",
-      "latest_prod_release_datetime": null,
+      "latest_prod_tag": "v1.6.3",
+      "latest_prod_release_datetime": "2026-01-27T11:15:41",
       "latest_dev_tag": "ed81beb",
       "latest_dev_release_datetime": "2026-01-24T16:34:52",
       "latest_qa_tag": "v1.6.3",
@@ -1620,7 +1620,7 @@
     {
       "repo_url": "NHSDigital/eps-FHIR-validator-lambda",
       "friendly_name": "fhir validator lambda",
-      "non_dependabot_open_pull_requests": 6,
+      "non_dependabot_open_pull_requests": 5,
       "dependabot_open_pull_requests": 5,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 0,
@@ -1630,111 +1630,48 @@
       "high_code_scanning_alerts": 0,
       "medium_code_scanning_alerts": 0,
       "low_code_scanning_alerts": 0,
-      "ci_workflow_status": "waiting",
-      "ci_workflow_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348",
+      "ci_workflow_status": "in_progress",
+      "ci_workflow_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108",
       "release_workflow_status": "success",
       "release_workflow_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21206879411",
       "latest_commit_check_runs": [
         {
-          "name": "delete-old-cloudformation-stacks",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21379165721/job/61542139883",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21379165721/job/61542139883",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "delete-old-cloudformation-stacks",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21342068138/job/61422984441",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21342068138/job/61422984441",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "delete-old-cloudformation-stacks",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21323885397/job/61377703357",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21323885397/job/61377703357",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "release_qa / sam_release_code",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352712353",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352712353",
-          "status": "waiting",
+          "name": "quality_checks / IaC-validation",
+          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591462568",
+          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591462568",
+          "status": "in_progress",
           "conclusion": null
         },
         {
-          "name": "release_dev / sam_release_code",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352539717",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352539717",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "package_code / sam_package_code",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352452976",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352452976",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "tag_release / tag_release",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352436406",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352436406",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "tag_release / install_semantic_release",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352426307",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352426307",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "SonarCloud Code Analysis",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/runs/61352420886",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/runs/61352420886",
-          "status": "completed",
-          "conclusion": "failure"
-        },
-        {
           "name": "quality_checks / quality_checks",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352296677",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352296677",
-          "status": "completed",
-          "conclusion": "success"
+          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591462562",
+          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591462562",
+          "status": "in_progress",
+          "conclusion": null
         },
         {
-          "name": "quality_checks / IaC-validation",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352296676",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352296676",
+          "name": "get_asdf_version",
+          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591450217",
+          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591450217",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "get_commit_id",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352293863",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352293863",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_asdf_version",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352293862",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168348/job/61352293862",
+          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591450172",
+          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395127108/job/61591450172",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "submit-maven",
-          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168168/job/61352293840",
-          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21313168168/job/61352293840",
+          "html_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395126604/job/61591448736",
+          "status_url": "https://github.com/NHSDigital/eps-FHIR-validator-lambda/actions/runs/21395126604/job/61591448736",
           "status": "completed",
           "conclusion": "success"
         }
       ],
-      "latest_commit_combined_check_runs_status": "failure",
+      "latest_commit_combined_check_runs_status": "success",
       "in_weekly_release": true,
       "latest_release_tag": "v1.1.47",
       "latest_release_name": "v1.1.47",
