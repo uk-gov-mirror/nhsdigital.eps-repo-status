@@ -22,7 +22,7 @@ def client(github_client: MagicMock) -> GithubDataClient:
 @pytest.fixture
 def repo_factory():
     def _factory(**overrides):
-        base = {"repoUrl": "owner/name", "mainBranch": "main"}
+        base = {"repoUrl": "owner/name", "mainBranch": "main", "isApiRepo": False}
         base.update(overrides)
         return base
 
@@ -261,6 +261,30 @@ def test_get_latest_environment_tag_returns_latest_release_datetime(
 
     assert tag == "v1.2.3"
     assert released_at == "2024-01-12T09:00:00Z"
+
+
+def test_get_latest_environment_tag_uses_internal_prefix_for_api_repo(
+    client: GithubDataClient, github_client: MagicMock, repo_factory
+) -> None:
+    gh_repo = MagicMock()
+    content_map = {
+        "_data/internal-dev.csv": "tag,release_datetime\nv1.2.3,2024-01-10T09:00:00Z\n",
+    }
+
+    def _get_contents(path, ref):
+        assert ref == "gh-pages"
+        return SimpleNamespace(decoded_content=content_map[path].encode("utf-8"))
+
+    gh_repo.get_contents.side_effect = _get_contents
+    github_client.get_repo.return_value = gh_repo
+
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=[".csv"], isApiRepo=True),
+        "dev",
+    )
+
+    assert tag == "v1.2.3"
+    assert released_at == "2024-01-10T09:00:00Z"
 
 
 def test_get_latest_environment_tag_detects_inconsistent_tags(

@@ -18,7 +18,11 @@ This action
 - commits the json file to _data in gh-pages branch.   
 
 Github pages is configured to build off the gh-pages branch.   
-This branch contains several jekyll html templates which read data from the _data folder and create html pages which are then published
+This branch contains several jekyll html templates which read data from the _data folder and create html pages which are then published.   
+
+The project also contains standard eps Makefile targets such as make lint, make install, make test etc.
+The project uses standard eps common workflows to run quality checks on pull requests and merges to main, and tag release common workflow to create a release on a merge to main.
+
 
 ## Testing data generation locally
 To test the data generation locally, create a branch from main.   

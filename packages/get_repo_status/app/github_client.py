@@ -220,9 +220,13 @@ class GithubDataClient:
 
         tags: List[str] = []
         release_entries: List[ReleaseEntry] = []
+        is_api_repo = bool(repo.get("isApiRepo", False))
 
         for suffix in release_suffixes:
-            file_name = f"{environment}{suffix}"
+            resolved_environment = environment
+            if is_api_repo and environment in ["dev", "qa"]:
+                resolved_environment = f"internal-{environment}"
+            file_name = f"{resolved_environment}{suffix}"
             entry = self._load_release_entry(gh_repo, repo_name, file_name)
             if entry is None:
                 return None, None
