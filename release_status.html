@@ -11,6 +11,7 @@ layout: page
     <th>Latest release tag</th>
     <th>Latest prod tag</th>
     <th>Unreleased tags</th>
+    <th>Commits since last release</th>
   </tr>
     {% assign weekly_repos = site.data.repo_status.repos | where: "in_weekly_release", true %}
     {% for repo in weekly_repos %}
@@ -29,6 +30,7 @@ layout: page
         <span>None</span>
       {% endif %}
     </td>
+    <td><a href="https://github.com/{{ repo.repo_url }}/compare/{{ repo.latest_release_tag }}...{{repo.main_branch}}">{{ repo.commits_since_last_release }}</a></td>
   </tr>
   {% endfor %}
 </table>
