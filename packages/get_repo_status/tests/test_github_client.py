@@ -376,6 +376,30 @@ def test_get_latest_environment_tag_returns_none_when_tag_missing(
     assert released_at is None
 
 
+def test_get_latest_environment_tag_uses_correct_name_for_spine_repo(
+    client: GithubDataClient, github_client: MagicMock, repo_factory
+) -> None:
+    gh_repo = MagicMock()
+    content_map = {
+        "_data/live.csv": "tag,release_datetime\nv1.2.3,2024-01-10T09:00:00Z\n",
+    }
+
+    def _get_contents(path, ref):
+        assert ref == "gh-pages"
+        return SimpleNamespace(decoded_content=content_map[path].encode("utf-8"))
+
+    gh_repo.get_contents.side_effect = _get_contents
+    github_client.get_repo.return_value = gh_repo
+
+    tag, released_at = client.get_latest_environment_tag(
+        repo_factory(releaseFiles=[".csv"], isSpineRepo=True),
+        "prod",
+    )
+
+    assert tag == "v1.2.3"
+    assert released_at == "2024-01-10T09:00:00Z"
+
+
 def test_get_unreleased_tags_returns_expected_order(
     client: GithubDataClient, github_client: MagicMock, repo_factory
 ) -> None:

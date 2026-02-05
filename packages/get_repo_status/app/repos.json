@@ -9,7 +9,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/prescriptionsforpatients",
@@ -21,7 +22,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": true
+    "isApiRepo": true,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/prescriptions-for-patients",
@@ -31,7 +33,8 @@
     "mainBranch": "master",
     "inWeeklyRelease": true,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-account-resources",
@@ -49,7 +52,8 @@
       "-account_account-resources-cdk-us_us-east-1_latest.csv",
       "-account_account-resources-cdk-uk_eu-west-2_latest.csv"
     ],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-prescription-status-update-api",
@@ -61,7 +65,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": true
+    "isApiRepo": true,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-clinical-prescription-tracker",
@@ -73,7 +78,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": true
+    "isApiRepo": true,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-prescription-tracker-ui",
@@ -85,7 +91,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-FHIR-validator-lambda",
@@ -97,7 +104,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/validation-service-fhir-r4",
@@ -107,7 +115,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-release-notes",
@@ -117,7 +126,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-get-secrets",
@@ -127,7 +137,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/nhs-fhir-middy-error-handler",
@@ -137,7 +148,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/nhs-eps-spine-client",
@@ -147,7 +159,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-load-test",
@@ -157,7 +170,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/electronic-prescription-service-api-regression-tests",
@@ -167,7 +181,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-aws-dashboards",
@@ -179,7 +194,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-storage-terraform",
@@ -187,9 +203,13 @@
     "ciWorkflow": "merge.yml",
     "releaseWorkflow": "release.yml",
     "mainBranch": "main",
-    "inWeeklyRelease": false,
-    "releaseFiles": [],
-    "isApiRepo": false
+    "inWeeklyRelease": true,
+    "releaseFiles": [
+      "-archive_latest.csv",
+      "-storage_latest.csv"
+    ],
+    "isApiRepo": false,
+    "isSpineRepo": true
   },
   {
     "repoUrl": "NHSDigital/eps-cdk-utils",
@@ -199,7 +219,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-assist-me",
@@ -211,7 +232,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-vpc-resources",
@@ -223,7 +245,8 @@
     "releaseFiles": [
       "_latest.csv"
     ],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-common-workflows",
@@ -233,7 +256,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-spine-shared",
@@ -243,7 +267,8 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   },
   {
     "repoUrl": "NHSDigital/eps-repo-status",
@@ -253,6 +278,7 @@
     "mainBranch": "main",
     "inWeeklyRelease": false,
     "releaseFiles": [],
-    "isApiRepo": false
+    "isApiRepo": false,
+    "isSpineRepo": false
   }
 ]
