@@ -96,7 +96,8 @@ def main(argv: List[str] | None = None) -> None:
                 "tool_version_python": tool_versions.get("python"),
                 "tool_version_poetry": tool_versions.get("poetry"),
                 "asdf_version": asdf_version,
-                "commits_since_latest_release": commits_since_last_release,
+                "commits_since_last_release": commits_since_last_release,
+                "main_branch": repo["mainBranch"],
             }
         )
 
