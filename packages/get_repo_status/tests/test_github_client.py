@@ -220,6 +220,32 @@ def test_get_latest_release_returns_none_fields_on_github_404(
     assert release == {"tag": None, "name": None, "url": None, "published_at": None}
 
 
+def test_get_commits_since_last_release_returns_ahead_count(
+    client: GithubDataClient, github_client: MagicMock, repo_factory
+) -> None:
+    gh_repo = MagicMock()
+    gh_repo.get_latest_release.return_value = SimpleNamespace(tag_name="v1.0.0")
+    gh_repo.compare.return_value = SimpleNamespace(ahead_by=4)
+    github_client.get_repo.return_value = gh_repo
+
+    count = client.get_commits_since_last_release(repo_factory())
+
+    assert count == 4
+    gh_repo.compare.assert_called_once_with("v1.0.0", "main")
+
+
+def test_get_commits_since_last_release_returns_negative_on_missing_release(
+    client: GithubDataClient, github_client: MagicMock, repo_factory
+) -> None:
+    gh_repo = MagicMock()
+    gh_repo.get_latest_release.side_effect = make_github_exception(404)
+    github_client.get_repo.return_value = gh_repo
+
+    count = client.get_commits_since_last_release(repo_factory())
+
+    assert count == -1
+
+
 def test_get_tool_versions_parses_known_tools(client: GithubDataClient, repo_factory) -> None:
     client.get_text_file_from_repo = MagicMock(
         return_value="""nodejs 18.16.0\npython 3.11.1\npoetry 1.5.1\nnodejs 20.0.0\n"""

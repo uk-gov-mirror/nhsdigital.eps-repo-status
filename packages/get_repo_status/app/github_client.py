@@ -174,6 +174,30 @@ class GithubDataClient:
             print(f"Error fetching latest release for {repo_name}: {exc}")
             return {"tag": None, "name": None, "url": None, "published_at": None}
 
+    def get_commits_since_last_release(self, repo: Repo) -> int:
+        repo_name = repo["repoUrl"]
+        branch_name = repo.get("mainBranch", "main")
+        gh_repo = self._safe_get_repo(repo_name)
+        if gh_repo is None:
+            return -1
+        try:
+            release = gh_repo.get_latest_release()
+            tag_name = getattr(release, "tag_name", None)
+            if not tag_name:
+                return -1
+            comparison = gh_repo.compare(tag_name, branch_name)
+            ahead_by = getattr(comparison, "ahead_by", None)
+            if ahead_by is None:
+                return -1
+            return int(ahead_by)
+        except GithubException as exc:
+            if exc.status != 404:
+                print(f"Error fetching commits since last release for {repo_name}: {exc}")
+            return -1
+        except Exception as exc:  # pylint: disable=broad-except
+            print(f"Error fetching commits since last release for {repo_name}: {exc}")
+            return -1
+
     def get_tool_versions(self, repo: Repo) -> Dict[str, Optional[str]]:
         repo_name = repo["repoUrl"]
         ref = repo.get("mainBranch", "main")

@@ -53,7 +53,8 @@ def main(argv: List[str] | None = None) -> None:
         latest_prod_tag, latest_prod_release_datetime = client.get_latest_environment_tag(repo, "prod")
         unreleased_tags = client.get_unreleased_tags(repo, latest_prod_tag)
         tool_versions = client.get_tool_versions(repo)
-        asdf_version = client.get_asdf_version(repo)
+        asdf_version = (client.get_asdf_version(repo),)
+        commits_since_last_release = client.get_commits_since_last_release(repo)
 
         results.append(
             {
@@ -95,6 +96,7 @@ def main(argv: List[str] | None = None) -> None:
                 "tool_version_python": tool_versions.get("python"),
                 "tool_version_poetry": tool_versions.get("poetry"),
                 "asdf_version": asdf_version,
+                "commits_since_latest_release": commits_since_last_release,
             }
         )
 
