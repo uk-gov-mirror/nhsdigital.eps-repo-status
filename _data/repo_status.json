@@ -1,5 +1,5 @@
 {
-  "generated_date_time": "2026-02-06T10:23:17",
+  "generated_date_time": "2026-02-06T10:35:51",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
@@ -290,11 +290,25 @@
       "high_code_scanning_alerts": 0,
       "medium_code_scanning_alerts": 0,
       "low_code_scanning_alerts": 0,
-      "ci_workflow_status": "in_progress",
+      "ci_workflow_status": "waiting",
       "ci_workflow_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937",
       "release_workflow_status": "waiting",
       "release_workflow_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21677763226",
       "latest_commit_check_runs": [
+        {
+          "name": "release_qa / sam_release_code",
+          "html_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937/job/62735889444",
+          "status_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937/job/62735889444",
+          "status": "waiting",
+          "conclusion": null
+        },
+        {
+          "name": "release_dev / Regression Tests / run_regression_tests",
+          "html_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937/job/62735223373",
+          "status_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937/job/62735223373",
+          "status": "completed",
+          "conclusion": "success"
+        },
         {
           "name": "release_dev_sandbox / Regression Tests",
           "html_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937/job/62734682049",
@@ -306,8 +320,8 @@
           "name": "release_dev / sam_release_code",
           "html_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937/job/62734400621",
           "status_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/21746435937/job/62734400621",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "release_dev_sandbox / sam_release_code",
@@ -402,8 +416,8 @@
       "latest_release_published_at": "2026-02-04T15:44:05",
       "latest_prod_tag": "v1.8.0-beta",
       "latest_prod_release_datetime": "2026-02-03T10:33:13",
-      "latest_dev_tag": "de6fbf8",
-      "latest_dev_release_datetime": "2026-02-05T10:12:18",
+      "latest_dev_tag": "434ae4c",
+      "latest_dev_release_datetime": "2026-02-06T10:17:50",
       "latest_qa_tag": "v1.8.1-beta",
       "latest_qa_release_datetime": "2026-02-04T16:14:56",
       "latest_ref_tag": "v1.8.1-beta",
@@ -4575,14 +4589,14 @@
       "ci_workflow_status": "N/A",
       "ci_workflow_url": "N/A",
       "release_workflow_status": "success",
-      "release_workflow_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/21713197984",
+      "release_workflow_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/21747217677",
       "latest_commit_check_runs": [],
       "latest_commit_combined_check_runs_status": "unknown",
       "in_weekly_release": false,
-      "latest_release_tag": "v1.0.19",
-      "latest_release_name": "v1.0.19",
-      "latest_release_url": "https://github.com/NHSDigital/eps-repo-status/releases/tag/v1.0.19",
-      "latest_release_published_at": "2026-02-05T13:27:39",
+      "latest_release_tag": "v1.0.20",
+      "latest_release_name": "v1.0.20",
+      "latest_release_url": "https://github.com/NHSDigital/eps-repo-status/releases/tag/v1.0.20",
+      "latest_release_published_at": "2026-02-06T10:29:41",
       "latest_prod_tag": null,
       "latest_prod_release_datetime": null,
       "latest_dev_tag": null,
@@ -4601,6 +4615,50 @@
         "0.18.0"
       ],
       "commits_since_last_release": 0,
+      "main_branch": "main"
+    },
+    {
+      "repo_url": "NHSDigital/eps-devcontainers",
+      "friendly_name": "eps devcontainers",
+      "non_dependabot_open_pull_requests": 1,
+      "dependabot_open_pull_requests": 2,
+      "critical_dependabot_alerts": -1,
+      "high_dependabot_alerts": -1,
+      "medium_dependabot_alerts": -1,
+      "low_dependabot_alerts": -1,
+      "critical_code_scanning_alerts": -1,
+      "high_code_scanning_alerts": -1,
+      "medium_code_scanning_alerts": -1,
+      "low_code_scanning_alerts": -1,
+      "ci_workflow_status": "N/A",
+      "ci_workflow_url": "N/A",
+      "release_workflow_status": "No Runs",
+      "release_workflow_url": "No Runs",
+      "latest_commit_check_runs": [],
+      "latest_commit_combined_check_runs_status": "success",
+      "in_weekly_release": false,
+      "latest_release_tag": null,
+      "latest_release_name": null,
+      "latest_release_url": null,
+      "latest_release_published_at": null,
+      "latest_prod_tag": null,
+      "latest_prod_release_datetime": null,
+      "latest_dev_tag": null,
+      "latest_dev_release_datetime": null,
+      "latest_qa_tag": null,
+      "latest_qa_release_datetime": null,
+      "latest_ref_tag": null,
+      "latest_ref_release_datetime": null,
+      "latest_int_tag": null,
+      "latest_int_release_datetime": null,
+      "unreleased_tags": [],
+      "tool_version_nodejs": "24.12.0",
+      "tool_version_python": "3.14.2",
+      "tool_version_poetry": "2.2.1",
+      "asdf_version": [
+        "0.18.0"
+      ],
+      "commits_since_last_release": -1,
       "main_branch": "main"
     }
   ]
