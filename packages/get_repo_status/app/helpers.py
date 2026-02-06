@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional, Union
 
 from . import Repo
 
-DEFAULT_REPOS_FILE = Path(__file__).with_name("repos.json")
+DEFAULT_REPOS_FILE = Path("repos.json").resolve()
 
 
 def isoformat_no_tz(dt: Optional[datetime]) -> Optional[str]:
