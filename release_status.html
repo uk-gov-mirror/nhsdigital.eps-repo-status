@@ -24,7 +24,7 @@ layout: page
     <td>
       {% if repo.unreleased_tags and repo.unreleased_tags.size > 0 %}
         {% for tag in repo.unreleased_tags %}
-          <div class="repo-unreleased-tag"><a href="https://github.com/{{ repo.repo_url }}/releases/tag/{{ tag }}">{{ tag }}</a></div>
+          <div class="repo-unreleased-tag"><a href="https://nhsdigital.github.io/{{ repo.repo_url | remove_first: 'NHSDigital/' }}/release_notes/{{ tag }}">{{ tag }}</a></div>
         {% endfor %}
       {% else %}
         <span>None</span>
