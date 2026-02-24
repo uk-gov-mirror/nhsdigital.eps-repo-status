@@ -10,7 +10,7 @@ env:
 jobs:
   dependabot-auto-approve-and-merge:
     needs: quality_checks
-    uses: NHSDigital/eps-common-workflows/.github/workflows/dependabot-auto-approve-and-merge.yml@2a083514efbae0b9ddacfcc87b9d285767b686b8
+    uses: NHSDigital/eps-common-workflows/.github/workflows/dependabot-auto-approve-and-merge.yml@8404cf6e3a61ac8de4d1644e175e288aa4965815
     secrets:
       AUTOMERGE_APP_ID: ${{ secrets.AUTOMERGE_APP_ID }}
       AUTOMERGE_PEM: ${{ secrets.AUTOMERGE_PEM }}
@@ -19,12 +19,12 @@ jobs:
       contents: write
 
   get_config_values:
-    uses: NHSDigital/eps-common-workflows/.github/workflows/get-repo-config.yml@2a083514efbae0b9ddacfcc87b9d285767b686b8
+    uses: NHSDigital/eps-common-workflows/.github/workflows/get-repo-config.yml@8404cf6e3a61ac8de4d1644e175e288aa4965815
     with:
       verify_published_from_main_image: false
 
   quality_checks:
-    uses: NHSDigital/eps-common-workflows/.github/workflows/quality-checks-devcontainer.yml@2a083514efbae0b9ddacfcc87b9d285767b686b8
+    uses: NHSDigital/eps-common-workflows/.github/workflows/quality-checks-devcontainer.yml@8404cf6e3a61ac8de4d1644e175e288aa4965815
     needs: [get_config_values]
     with:
       pinned_image: ${{ needs.get_config_values.outputs.pinned_image }}
@@ -32,13 +32,13 @@ jobs:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   pr_title_format_check:
-    uses: NHSDigital/eps-common-workflows/.github/workflows/pr_title_check.yml@2a083514efbae0b9ddacfcc87b9d285767b686b8
+    uses: NHSDigital/eps-common-workflows/.github/workflows/pr_title_check.yml@8404cf6e3a61ac8de4d1644e175e288aa4965815
     permissions:
       pull-requests: write
 
   tag_release:
     needs: [get_config_values]
-    uses: NHSDigital/eps-common-workflows/.github/workflows/tag-release-devcontainer.yml@2a083514efbae0b9ddacfcc87b9d285767b686b8
+    uses: NHSDigital/eps-common-workflows/.github/workflows/tag-release-devcontainer.yml@8404cf6e3a61ac8de4d1644e175e288aa4965815
     with:
       dry_run: true
       pinned_image: "${{ needs.get_config_values.outputs.pinned_image }}"
