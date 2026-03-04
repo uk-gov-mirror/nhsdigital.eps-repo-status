@@ -1,5 +1,5 @@
 {
-  "generated_date_time": "2026-03-04T15:26:26",
+  "generated_date_time": "2026-03-04T16:25:15",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
@@ -590,7 +590,7 @@
     {
       "repo_url": "NHSDigital/electronic-prescription-service-account-resources",
       "friendly_name": "account resources",
-      "non_dependabot_open_pull_requests": 3,
+      "non_dependabot_open_pull_requests": 4,
       "dependabot_open_pull_requests": 11,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 0,
@@ -1762,7 +1762,7 @@
     {
       "repo_url": "NHSDigital/eps-prescription-tracker-ui",
       "friendly_name": "clinical prescription tracker ui",
-      "non_dependabot_open_pull_requests": 7,
+      "non_dependabot_open_pull_requests": 8,
       "dependabot_open_pull_requests": 24,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 4,
@@ -1777,6 +1777,13 @@
       "release_workflow_status": "failure",
       "release_workflow_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22581688479",
       "latest_commit_check_runs": [
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22676444795/job/65734331312",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22676444795/job/65734331312",
+          "status": "completed",
+          "conclusion": "success"
+        },
         {
           "name": "release_qa / release_all_code",
           "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22674136316/job/65731954623",
@@ -2805,6 +2812,20 @@
       "latest_commit_check_runs": [
         {
           "name": "upload_results",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674929776/job/65734218564",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674929776/job/65734218564",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "upload_results",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674854158/job/65733687421",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674854158/job/65733687421",
+          "status": "completed",
+          "conclusion": "failure"
+        },
+        {
+          "name": "upload_results",
           "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22675230809/job/65731868978",
           "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22675230809/job/65731868978",
           "status": "completed",
@@ -2877,8 +2898,8 @@
           "name": "run_regression_tests (single_access)",
           "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674929776/job/65728812361",
           "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674929776/job/65728812361",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "failure"
         },
         {
           "name": "run_regression_tests (others)",
@@ -2933,8 +2954,8 @@
           "name": "run_regression_tests (single_access)",
           "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674854158/job/65728531820",
           "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api-regression-tests/actions/runs/22674854158/job/65728531820",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "failure"
         },
         {
           "name": "run_regression_tests (multiple_roles_single_access)",
