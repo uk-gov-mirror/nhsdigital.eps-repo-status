@@ -139,7 +139,9 @@ def test_get_latest_status_combines_check_runs_and_statuses(
     gh_repo = MagicMock()
     branch = SimpleNamespace()
     commit = MagicMock()
-    commit.get_check_runs.return_value = [
+    check_suite = MagicMock()
+    check_suite.head_branch = "main"
+    check_suite.get_check_runs.return_value = [
         SimpleNamespace(
             name="Build",
             html_url="https://example.com/build",
@@ -148,6 +150,7 @@ def test_get_latest_status_combines_check_runs_and_statuses(
         ),
         SimpleNamespace(name="Dependabot", html_url="", status="completed", conclusion="success"),
     ]
+    commit.get_check_suites.return_value = [check_suite]
     commit.get_statuses.return_value = [
         SimpleNamespace(context="ci/lint", target_url="https://example.com/lint", state="failure"),
     ]
@@ -158,9 +161,41 @@ def test_get_latest_status_combines_check_runs_and_statuses(
     entries, overall = client.get_latest_status(repo_factory())
 
     assert overall == "failure"
-    assert len(entries) == 2
+    assert len(entries) == 3
     assert entries[0]["name"] == "Build"
-    assert entries[1]["name"] == "ci/lint"
+    assert entries[1]["name"] == "Dependabot"
+    assert entries[2]["name"] == "ci/lint"
+
+
+def test_get_latest_status_ignores_check_suites_from_non_main_branch(
+    client: GithubDataClient, github_client: MagicMock, repo_factory
+) -> None:
+    gh_repo = MagicMock()
+    branch = SimpleNamespace()
+    commit = MagicMock()
+    check_suite = MagicMock()
+    check_suite.head_branch = "feature/test"
+    check_suite.get_check_runs.return_value = [
+        SimpleNamespace(
+            name="Build",
+            html_url="https://example.com/build",
+            status="completed",
+            conclusion="failure",
+        )
+    ]
+    commit.get_check_suites.return_value = [check_suite]
+    commit.get_statuses.return_value = [
+        SimpleNamespace(context="ci/lint", target_url="https://example.com/lint", state="success"),
+    ]
+    branch.commit = commit
+    gh_repo.get_branch.return_value = branch
+    github_client.get_repo.return_value = gh_repo
+
+    entries, overall = client.get_latest_status(repo_factory(mainBranch="main"))
+
+    assert overall == "success"
+    assert len(entries) == 1
+    assert entries[0]["name"] == "ci/lint"
 
 
 def test_get_latest_status_returns_unknown_on_exception(

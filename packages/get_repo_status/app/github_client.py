@@ -114,28 +114,30 @@ class GithubDataClient:
         try:
             branch = gh_repo.get_branch(branch_name)
             commit = branch.commit
-            check_runs = commit.get_check_runs()
+            check_suites = commit.get_check_suites()
             statuses = commit.get_statuses()
             check_run_entries: List[Dict[str, Optional[str]]] = []
             combined_check_runs_status = "success"
-            for check_run in check_runs:
-                if check_run.name == "Dependabot":
+            for check_suite in check_suites:
+                if check_suite.head_branch != repo.get("mainBranch"):
                     continue
-                check_run_entries.append(
-                    {
-                        "name": check_run.name,
-                        "html_url": check_run.html_url,
-                        "status_url": check_run.html_url,
-                        "status": check_run.status,
-                        "conclusion": check_run.conclusion,
-                    }
-                )
-                if check_run.status == "completed" and check_run.conclusion in {
-                    "failure",
-                    "cancelled",
-                    "timed_out",
-                }:
-                    combined_check_runs_status = "failure"
+                check_runs = check_suite.get_check_runs()
+                for check_run in check_runs:
+                    check_run_entries.append(
+                        {
+                            "name": check_run.name,
+                            "html_url": check_run.html_url,
+                            "status_url": check_run.html_url,
+                            "status": check_run.status,
+                            "conclusion": check_run.conclusion,
+                        }
+                    )
+                    if check_run.status == "completed" and check_run.conclusion in {
+                        "failure",
+                        "cancelled",
+                        "timed_out",
+                    }:
+                        combined_check_runs_status = "failure"
             for status in statuses:
                 check_run_entries.append(
                     {
