@@ -123,6 +123,8 @@ class GithubDataClient:
                     continue
                 check_runs = check_suite.get_check_runs()
                 for check_run in check_runs:
+                    if check_run.name == "Dependabot":
+                        continue
                     check_run_entries.append(
                         {
                             "name": check_run.name,

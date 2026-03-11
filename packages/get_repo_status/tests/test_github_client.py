@@ -161,10 +161,9 @@ def test_get_latest_status_combines_check_runs_and_statuses(
     entries, overall = client.get_latest_status(repo_factory())
 
     assert overall == "failure"
-    assert len(entries) == 3
+    assert len(entries) == 2
     assert entries[0]["name"] == "Build"
-    assert entries[1]["name"] == "Dependabot"
-    assert entries[2]["name"] == "ci/lint"
+    assert entries[1]["name"] == "ci/lint"
 
 
 def test_get_latest_status_ignores_check_suites_from_non_main_branch(
