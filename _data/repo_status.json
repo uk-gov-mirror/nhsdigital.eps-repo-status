@@ -1,5 +1,5 @@
 {
-  "generated_date_time": "2026-03-12T03:14:08",
+  "generated_date_time": "2026-03-12T04:47:08",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
@@ -79,8 +79,8 @@
           "name": "quality_checks / quality_checks",
           "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66731461211",
           "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66731461211",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "quality_checks / IaC-validation",
@@ -102,6 +102,62 @@
           "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66731611459",
           "status": "completed",
           "conclusion": "failure"
+        },
+        {
+          "name": "tag_release",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128148",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128148",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "release_dev",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128357",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128357",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "package_code",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128408",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128408",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "release_ref",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128469",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128469",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "release_qa",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128495",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128495",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "release_dev_sandbox",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128508",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22984530578/job/66732128508",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "delete-old-proxygen-deployments",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22985622568/job/66734878368",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22985622568/job/66734878368",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22985622568/job/66734878395",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-api/actions/runs/22985622568/job/66734878395",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "latest_commit_combined_check_runs_status": "failure",
@@ -1891,6 +1947,20 @@
           "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22983259707/job/66727632422",
           "status": "completed",
           "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22984984738/job/66732956167",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22984984738/job/66732956167",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22986101201/job/66736388004",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22986101201/job/66736388004",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "latest_commit_combined_check_runs_status": "success",
@@ -3338,7 +3408,7 @@
       "high_code_scanning_alerts": -1,
       "medium_code_scanning_alerts": -1,
       "low_code_scanning_alerts": -1,
-      "ci_workflow_status": "in_progress",
+      "ci_workflow_status": "success",
       "ci_workflow_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/22984844242",
       "release_workflow_status": "success",
       "release_workflow_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/21669047656",
@@ -3351,8 +3421,8 @@
       "latest_release_published_at": "2026-03-05T12:04:54",
       "latest_prod_tag": "v1.3.1",
       "latest_prod_release_datetime": "2026-02-04T11:39:20",
-      "latest_dev_tag": "5b9e01e",
-      "latest_dev_release_datetime": "2026-03-11T03:22:01",
+      "latest_dev_tag": "2b3f9ad",
+      "latest_dev_release_datetime": "2026-03-12T03:22:39",
       "latest_qa_tag": null,
       "latest_qa_release_datetime": null,
       "latest_ref_tag": "Inconsistent released tags",
