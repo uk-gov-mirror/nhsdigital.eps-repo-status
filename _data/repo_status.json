@@ -1,11 +1,11 @@
 {
-  "generated_date_time": "2026-03-13T11:22:28",
+  "generated_date_time": "2026-03-13T12:25:35",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
       "friendly_name": "fhir facade API",
       "non_dependabot_open_pull_requests": 4,
-      "dependabot_open_pull_requests": 1,
+      "dependabot_open_pull_requests": 0,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 0,
       "medium_dependabot_alerts": 1,
@@ -1426,7 +1426,7 @@
       "high_code_scanning_alerts": 0,
       "medium_code_scanning_alerts": 0,
       "low_code_scanning_alerts": 0,
-      "ci_workflow_status": "in_progress",
+      "ci_workflow_status": "waiting",
       "ci_workflow_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23047082741",
       "release_workflow_status": "failure",
       "release_workflow_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/22716948750",
@@ -1519,8 +1519,22 @@
           "name": "release_dev / Regression Tests / run_regression_tests",
           "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23047082741/job/66941808119",
           "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23047082741/job/66941808119",
-          "status": "in_progress",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "release_qa / release_all_code",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23047082741/job/66943775066",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23047082741/job/66943775066",
+          "status": "waiting",
           "conclusion": null
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23048908408/job/66944860409",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23048908408/job/66944860409",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "latest_commit_combined_check_runs_status": "success",
@@ -3171,8 +3185,8 @@
       "latest_commit_check_runs": [
         {
           "name": "SonarCloud Code Analysis",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/runs/66939747864",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/runs/66939747864",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/runs/66950880658",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/runs/66950880658",
           "status": "completed",
           "conclusion": "failure"
         },
@@ -3213,178 +3227,115 @@
         },
         {
           "name": "Get asdf Version",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830810955",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830810955",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Quality Checks / get_docker_images_to_scan",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830833655",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830833655",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Quality Checks / IaC-validation",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830833669",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830833669",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948306663",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948306663",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Quality Checks / quality_checks",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830833707",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830833707",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948318851",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948318851",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Quality Checks / IaC-validation",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948318857",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948318857",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Quality Checks / get_docker_images_to_scan",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948319003",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948319003",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Quality Checks / docker_vulnerability_scan",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830856447",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66830856447",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948331899",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948331899",
           "status": "completed",
           "conclusion": "skipped"
         },
         {
           "name": "Get Next Version Number for Poetry / install_semantic_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831284247",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831284247",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948661547",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948661547",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Get Next Version Number for Poetry / tag_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831337406",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831337406",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948700646",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948700646",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Build Package and Upload as Artifact",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831398362",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831398362",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948760362",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948760362",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Tag Release / install_semantic_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831480593",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831480593",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948830141",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948830141",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Tag Release / tag_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831563108",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23013625715/job/66831563108",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948871763",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23049945839/job/66948871763",
           "status": "completed",
           "conclusion": "failure"
         },
         {
           "name": "Get asdf Version",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939400557",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939400557",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950538309",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950538309",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Quality Checks / IaC-validation",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939416414",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939416414",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950548854",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950548854",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Quality Checks / get_docker_images_to_scan",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939416468",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939416468",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950548883",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950548883",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Quality Checks / quality_checks",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939416510",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939416510",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950548884",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950548884",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "Quality Checks / docker_vulnerability_scan",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939434724",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939434724",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950570187",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950570187",
           "status": "completed",
           "conclusion": "skipped"
         },
         {
           "name": "Get Next Version Number for Poetry / install_semantic_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939771353",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939771353",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Get Next Version Number for Poetry / tag_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939808320",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939808320",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Build Package and Upload as Artifact",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939878154",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939878154",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Tag Release / install_semantic_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939940852",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939940852",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Tag Release / tag_release",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939990376",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23047276594/job/66939990376",
-          "status": "completed",
-          "conclusion": "failure"
-        },
-        {
-          "name": "Get asdf Version",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943703354",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943703354",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Quality Checks / get_docker_images_to_scan",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943714099",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943714099",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Quality Checks / IaC-validation",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943714127",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943714127",
+          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950892906",
+          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23050595483/job/66950892906",
           "status": "in_progress",
           "conclusion": null
-        },
-        {
-          "name": "Quality Checks / quality_checks",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943714150",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943714150",
-          "status": "in_progress",
-          "conclusion": null
-        },
-        {
-          "name": "Quality Checks / docker_vulnerability_scan",
-          "html_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943726099",
-          "status_url": "https://github.com/NHSDigital/eps-spine-shared/actions/runs/23048556891/job/66943726099",
-          "status": "completed",
-          "conclusion": "skipped"
         }
       ],
       "latest_commit_combined_check_runs_status": "failure",
