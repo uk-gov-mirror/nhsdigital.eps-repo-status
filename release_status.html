@@ -16,7 +16,14 @@ layout: page
     {% assign weekly_repos = site.data.repo_status.repos | where: "in_weekly_release", true %}
     {% for repo in weekly_repos %}
   <tr>
-    <td><a href=https://github.com/{{repo.repo_url}}>{{ repo.friendly_name }}</a></td>
+    <td>
+      <div class="repo-unreleased-tag">
+      <a href=https://github.com/{{repo.repo_url}}>{{ repo.friendly_name }}</a>
+      </div>
+      <div class="repo-unreleased-tag">
+      <a href="https://nhsdigital.github.io/{{ repo.repo_url | remove_first: 'NHSDigital/' }}">Release history</a>
+      </div>
+    </td>
     <td><a href="{{ repo.ci_workflow_url }}">{{ repo.ci_workflow_status }}</a></td>
     <td><a href="{{ repo.release_workflow_url }}">{{ repo.release_workflow_status }}</a></td>
     <td><a href="{{ repo.latest_release_url }}">{{ repo.latest_release_tag }} - {{repo.latest_release_published_at}}</a></td>
