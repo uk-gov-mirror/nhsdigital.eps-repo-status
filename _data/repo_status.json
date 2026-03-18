@@ -1,5 +1,5 @@
 {
-  "generated_date_time": "2026-03-18T08:29:13",
+  "generated_date_time": "2026-03-18T09:32:49",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
@@ -2103,6 +2103,13 @@
           "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23234155574/job/67534003596",
           "status": "completed",
           "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23235948731/job/67539776610",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23235948731/job/67539776610",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "latest_commit_combined_check_runs_status": "success",
@@ -2660,13 +2667,13 @@
       "low_code_scanning_alerts": 0,
       "ci_workflow_status": "success",
       "ci_workflow_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23134032505",
-      "release_workflow_status": "in_progress",
+      "release_workflow_status": "failure",
       "release_workflow_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155",
       "latest_commit_check_runs": [
         {
           "name": "SonarCloud Code Analysis",
-          "html_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/runs/67193943629",
-          "status_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/runs/67193943629",
+          "html_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/runs/67538939210",
+          "status_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/runs/67538939210",
           "status": "completed",
           "conclusion": "success"
         },
@@ -2786,25 +2793,39 @@
           "name": "quality_checks / quality_checks",
           "html_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538538240",
           "status_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538538240",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "quality_checks / IaC-validation",
           "html_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538538255",
           "status_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538538255",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "quality_checks / get_docker_images_to_scan",
           "html_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538538257",
           "status_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538538257",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "quality_checks / docker_vulnerability_scan",
+          "html_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538716277",
+          "status_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538716277",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "tag_release / tag_release",
+          "html_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538956053",
+          "status_url": "https://github.com/NHSDigital/nhs-fhir-middy-error-handler/actions/runs/23235554155/job/67538956053",
+          "status": "completed",
+          "conclusion": "failure"
         }
       ],
-      "latest_commit_combined_check_runs_status": "success",
+      "latest_commit_combined_check_runs_status": "failure",
       "in_weekly_release": false,
       "latest_release_tag": "v2.1.77",
       "latest_release_name": "v2.1.77",
