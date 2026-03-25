@@ -1,76 +1,76 @@
 {
-    "name": "eps-repo-status",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "..",
-        "args": {
-            "DOCKER_GID": "${env:DOCKER_GID:}",
-            "IMAGE_NAME": "node_24_python_3_14",
-            "IMAGE_VERSION": "v1.0.7",
-            "USER_UID": "${localEnv:USER_ID:}",
-            "USER_GID": "${localEnv:GROUP_ID:}"
-        }
-    },
-    "mounts": [
-        "source=${env:HOME}${env:USERPROFILE}/.aws,target=/home/vscode/.aws,type=bind",
-        "source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind",
-        "source=${env:HOME}${env:USERPROFILE}/.gnupg,target=/home/vscode/.gnupg,type=bind",
-        "source=${env:HOME}${env:USERPROFILE}/.npmrc,target=/home/vscode/.npmrc,type=bind"
-    ],
-    "postAttachCommand": "git-secrets --register-aws; git-secrets --add-provider -- cat /usr/share/secrets-scanner/nhsd-rules-deny.txt",
-    "features": {},
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "AmazonWebServices.aws-toolkit-vscode",
-                "redhat.vscode-yaml",
-                "ms-python.python",
-                "ms-python.flake8",
-                "eamodio.gitlens",
-                "github.vscode-pull-request-github",
-                "orta.vscode-jest",
-                "42crunch.vscode-openapi",
-                "mermade.openapi-lint",
-                "christian-kohler.npm-intellisense",
-                "dbaeumer.vscode-eslint",
-                "lfm.vscode-makefile-term",
-                "GrapeCity.gc-excelviewer",
-                "redhat.vscode-xml",
-                "streetsidesoftware.code-spell-checker",
-                "timonwong.shellcheck",
-                "mkhl.direnv",
-                "github.vscode-github-actions"
-            ],
-            "settings": {
-                "python.defaultInterpreterPath": "/workspaces/eps-repo-status/.venv/bin/python",
-                "python.analysis.autoSearchPaths": true,
-                "python.analysis.extraPaths": [],
-                "python.testing.unittestEnabled": false,
-                "python.testing.pytestEnabled": true,
-                "pylint.enabled": false,
-                "python.linting.flake8Enabled": true,
-                "python.linting.enabled": true,
-                "editor.formatOnPaste": false,
-                "editor.formatOnType": false,
-                "editor.formatOnSave": true,
-                "editor.formatOnSaveMode": "file",
-                "cSpell.words": [
-                    "fhir",
-                    "Formik",
-                    "pino",
-                    "serialisation"
-                ],
-                "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-                "[typescript]": {
-                    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-                },
-                "editor.codeActionsOnSave": {
-                    "source.fixAll.eslint": "always"
-                }
-            }
-        }
-    },
-    "remoteEnv": {
-        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  "name": "eps-repo-status",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "DOCKER_GID": "${env:DOCKER_GID:}",
+      "IMAGE_NAME": "node_24_python_3_14",
+      "IMAGE_VERSION": "v1.2.0",
+      "USER_UID": "${localEnv:USER_ID:}",
+      "USER_GID": "${localEnv:GROUP_ID:}"
     }
+  },
+  "mounts": [
+    "source=${env:HOME}${env:USERPROFILE}/.aws,target=/home/vscode/.aws,type=bind",
+    "source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind",
+    "source=${env:HOME}${env:USERPROFILE}/.gnupg,target=/home/vscode/.gnupg,type=bind",
+    "source=${env:HOME}${env:USERPROFILE}/.npmrc,target=/home/vscode/.npmrc,type=bind"
+  ],
+  "postAttachCommand": "git-secrets --register-aws; git-secrets --add-provider -- cat /usr/share/secrets-scanner/nhsd-rules-deny.txt",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "AmazonWebServices.aws-toolkit-vscode",
+        "redhat.vscode-yaml",
+        "ms-python.python",
+        "ms-python.flake8",
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github",
+        "orta.vscode-jest",
+        "42crunch.vscode-openapi",
+        "mermade.openapi-lint",
+        "christian-kohler.npm-intellisense",
+        "dbaeumer.vscode-eslint",
+        "lfm.vscode-makefile-term",
+        "GrapeCity.gc-excelviewer",
+        "redhat.vscode-xml",
+        "streetsidesoftware.code-spell-checker",
+        "timonwong.shellcheck",
+        "mkhl.direnv",
+        "github.vscode-github-actions"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/workspaces/eps-repo-status/.venv/bin/python",
+        "python.analysis.autoSearchPaths": true,
+        "python.analysis.extraPaths": [],
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestEnabled": true,
+        "pylint.enabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.linting.enabled": true,
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
+        "cSpell.words": [
+          "fhir",
+          "Formik",
+          "pino",
+          "serialisation"
+        ],
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "[typescript]": {
+          "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        },
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "always"
+        }
+      }
+    }
+  },
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  }
 }
