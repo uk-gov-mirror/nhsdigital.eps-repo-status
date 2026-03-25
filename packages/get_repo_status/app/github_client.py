@@ -5,7 +5,7 @@ from datetime import datetime
 import json
 from typing import Any, Dict, List, Optional, Tuple, TypedDict
 
-from github import Auth, Github
+from github import Auth, Github, Repository
 from github.GithubException import GithubException
 
 from . import Repo
@@ -48,6 +48,20 @@ class GithubDataClient:
         except Exception as exc:  # pylint: disable=broad-except
             print(f"Error fetching pull requests for {repo_name}: {exc}")
             return -1, -1
+
+    def get_fork_pr_contributor_approval(self, repo: Repo) -> str:
+        repo_name = repo["repoUrl"]
+        gh_repo = self._safe_get_repo(repo_name)
+        if gh_repo is None:
+            return "Error"
+        try:
+            approval_policy = gh_repo.requester.requestJsonAndCheck(
+                "GET", gh_repo.url + "/actions/permissions/fork-pr-contributor-approval"
+            )
+            return approval_policy[1]["approval_policy"]
+        except Exception as exc:  # pylint: disable=broad-except
+            print(f"Error fetching fork_pr_contributor_approval {repo_name}: {exc}")
+            return "Error"
 
     def get_dependabot_alerts(self, repo: Repo) -> Dict[str, int]:
         repo_name = repo["repoUrl"]
@@ -342,7 +356,7 @@ class GithubDataClient:
             print(f"Error fetching {path} for {repo_name}: {exc}")
             return None
 
-    def _safe_get_repo(self, repo_name: str) -> Optional[Any]:
+    def _safe_get_repo(self, repo_name: str) -> Optional[Repository.Repository]:
         try:
             return self.github.get_repo(repo_name)
         except Exception as exc:  # pylint: disable=broad-except

@@ -56,6 +56,7 @@ def main(argv: List[str] | None = None) -> None:
         asdf_version = (client.get_asdf_version(repo),)
         devcontainer_details = client.get_devcontainer_details(repo)
         commits_since_last_release = client.get_commits_since_last_release(repo)
+        fork_pr_contributor_approval = client.get_fork_pr_contributor_approval(repo)
 
         results.append(
             {
@@ -101,6 +102,7 @@ def main(argv: List[str] | None = None) -> None:
                 "devcontainer_image_version": devcontainer_details.get("IMAGE_VERSION"),
                 "commits_since_last_release": commits_since_last_release,
                 "main_branch": repo["mainBranch"],
+                "fork_pr_contributor_approval": fork_pr_contributor_approval,
             }
         )
 
