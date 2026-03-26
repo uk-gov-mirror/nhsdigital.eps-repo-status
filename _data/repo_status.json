@@ -1,5 +1,5 @@
 {
-  "generated_date_time": "2026-03-26T15:42:25",
+  "generated_date_time": "2026-03-26T16:40:33",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
@@ -255,7 +255,7 @@
       "low_code_scanning_alerts": 0,
       "ci_workflow_status": "waiting",
       "ci_workflow_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/23584334477",
-      "release_workflow_status": "queued",
+      "release_workflow_status": "waiting",
       "release_workflow_url": "https://github.com/NHSDigital/prescriptionsforpatients/actions/runs/23430652954",
       "latest_commit_check_runs": [
         {
@@ -1204,13 +1204,34 @@
           "name": "release_int / release_code_and_api",
           "html_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68737567913",
           "status_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68737567913",
-          "status": "waiting",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "release_int_sandbox / release_code_and_api",
           "html_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68737567944",
           "status_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68737567944",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "release_int_sandbox / Regression Tests",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68740848389",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68740848389",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "release_int / Regression Tests / run_regression_tests",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68742155393",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68742155393",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "release_prod / release_code_and_api",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68743416717",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-status-update-api/actions/runs/23593724218/job/68743416717",
           "status": "waiting",
           "conclusion": null
         },
@@ -1243,8 +1264,8 @@
       "latest_qa_release_datetime": "2026-03-26T15:23:07",
       "latest_ref_tag": "v1.16.8-beta",
       "latest_ref_release_datetime": "2026-03-26T15:23:23",
-      "latest_int_tag": "v1.16.7-beta",
-      "latest_int_release_datetime": "2026-03-26T11:44:37",
+      "latest_int_tag": "v1.16.8-beta",
+      "latest_int_release_datetime": "2026-03-26T15:55:15",
       "unreleased_tags": [
         "v1.16.8-beta",
         "v1.16.7-beta"
@@ -1444,7 +1465,7 @@
       "dependabot_open_pull_requests": 10,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 1,
-      "medium_dependabot_alerts": 2,
+      "medium_dependabot_alerts": 3,
       "low_dependabot_alerts": 2,
       "critical_code_scanning_alerts": 0,
       "high_code_scanning_alerts": 0,
@@ -1718,6 +1739,13 @@
           "name": "delete-old-cloudformation-stacks",
           "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23600714811/job/68729680116",
           "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23600714811/job/68729680116",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23603799617/job/68740836138",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/23603799617/job/68740836138",
           "status": "completed",
           "conclusion": "success"
         }
@@ -2888,7 +2916,7 @@
       "dependabot_open_pull_requests": 0,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 2,
-      "medium_dependabot_alerts": 2,
+      "medium_dependabot_alerts": 3,
       "low_dependabot_alerts": 1,
       "critical_code_scanning_alerts": 0,
       "high_code_scanning_alerts": 0,
@@ -3215,7 +3243,7 @@
       "dependabot_open_pull_requests": 1,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 0,
-      "medium_dependabot_alerts": 2,
+      "medium_dependabot_alerts": 3,
       "low_dependabot_alerts": 0,
       "critical_code_scanning_alerts": 0,
       "high_code_scanning_alerts": 0,
@@ -3614,7 +3642,7 @@
       "dependabot_open_pull_requests": 1,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 0,
-      "medium_dependabot_alerts": 2,
+      "medium_dependabot_alerts": 3,
       "low_dependabot_alerts": 1,
       "critical_code_scanning_alerts": 0,
       "high_code_scanning_alerts": 0,
@@ -4118,7 +4146,7 @@
       "dependabot_open_pull_requests": 0,
       "critical_dependabot_alerts": 0,
       "high_dependabot_alerts": 0,
-      "medium_dependabot_alerts": 1,
+      "medium_dependabot_alerts": 0,
       "low_dependabot_alerts": 1,
       "critical_code_scanning_alerts": -1,
       "high_code_scanning_alerts": -1,
@@ -4127,505 +4155,85 @@
       "ci_workflow_status": "N/A",
       "ci_workflow_url": "N/A",
       "release_workflow_status": "success",
-      "release_workflow_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363",
+      "release_workflow_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082",
       "latest_commit_check_runs": [
         {
           "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582895929",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582895929",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746878682",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746878682",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582916519",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582916519",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "quality_checks / get_docker_images_to_scan",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582964692",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582964692",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746907986",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746907986",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "quality_checks / quality_checks",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582964741",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582964741",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746945475",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746945475",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "quality_checks / get_docker_images_to_scan",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746945484",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746945484",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "quality_checks / IaC-validation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582964756",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68582964756",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746945588",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68746945588",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "quality_checks / docker_vulnerability_scan",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68583214661",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68583214661",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68747231962",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68747231962",
           "status": "completed",
           "conclusion": "skipped"
         },
         {
           "name": "tag_release / tag_release",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68583270465",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23556017363/job/68583270465",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68747293756",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605465082/job/68747293756",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23557166402/job/68587045179",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23557166402/job/68587045179",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605769092/job/68747964216",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605769092/job/68747964216",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23557166402/job/68587074460",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23557166402/job/68587074460",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605769092/job/68748017819",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605769092/job/68748017819",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23557166402/job/68587113182",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23557166402/job/68587113182",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23559653124/job/68595803303",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23559653124/job/68595803303",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23559653124/job/68595820763",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23559653124/job/68595820763",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23559653124/job/68595868796",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23559653124/job/68595868796",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23561898074/job/68603657169",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23561898074/job/68603657169",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23561898074/job/68603673548",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23561898074/job/68603673548",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23561898074/job/68603719019",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23561898074/job/68603719019",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23564434293/job/68612329649",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23564434293/job/68612329649",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23564434293/job/68612353046",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23564434293/job/68612353046",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23564434293/job/68612386846",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23564434293/job/68612386846",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23566804284/job/68620209569",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23566804284/job/68620209569",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23566804284/job/68620229269",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23566804284/job/68620229269",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23566804284/job/68620251907",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23566804284/job/68620251907",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23568900111/job/68626857112",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23568900111/job/68626857112",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23568900111/job/68626875840",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23568900111/job/68626875840",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23568900111/job/68626901075",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23568900111/job/68626901075",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23571349339/job/68634403936",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23571349339/job/68634403936",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23571349339/job/68634415059",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23571349339/job/68634415059",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23571349339/job/68634434491",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23571349339/job/68634434491",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23573147911/job/68639917961",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23573147911/job/68639917961",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23573147911/job/68639931574",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23573147911/job/68639931574",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23573147911/job/68639952968",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23573147911/job/68639952968",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23575489322/job/68646897830",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23575489322/job/68646897830",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23575489322/job/68646907853",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23575489322/job/68646907853",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23575489322/job/68646934992",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23575489322/job/68646934992",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23578041835/job/68654852335",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23578041835/job/68654852335",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23578041835/job/68654863697",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23578041835/job/68654863697",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23578041835/job/68654875450",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23578041835/job/68654875450",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23579234483/job/68658414283",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23579234483/job/68658414283",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23579234483/job/68658425436",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23579234483/job/68658425436",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23579234483/job/68658452881",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23579234483/job/68658452881",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23580754689/job/68662910273",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23580754689/job/68662910273",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23580754689/job/68662921385",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23580754689/job/68662921385",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23580754689/job/68662944658",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23580754689/job/68662944658",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23582643937/job/68668561001",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23582643937/job/68668561001",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23582643937/job/68668575144",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23582643937/job/68668575144",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23582643937/job/68668603003",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23582643937/job/68668603003",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23584405788/job/68673990935",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23584405788/job/68673990935",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23584405788/job/68674006279",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23584405788/job/68674006279",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23584405788/job/68674034316",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23584405788/job/68674034316",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23586835697/job/68681920422",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23586835697/job/68681920422",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23586835697/job/68681942134",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23586835697/job/68681942134",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23586835697/job/68681967318",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23586835697/job/68681967318",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23589256277/job/68690061129",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23589256277/job/68690061129",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23589256277/job/68690085888",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23589256277/job/68690085888",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23589256277/job/68690135780",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23589256277/job/68690135780",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23591623606/job/68698016864",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23591623606/job/68698016864",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23591623606/job/68698035790",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23591623606/job/68698035790",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23591623606/job/68698071544",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23591623606/job/68698071544",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23594027303/job/68706046933",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23594027303/job/68706046933",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23594027303/job/68706063994",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23594027303/job/68706063994",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23594027303/job/68706092636",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23594027303/job/68706092636",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23597106651/job/68716698156",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23597106651/job/68716698156",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23597106651/job/68716719981",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23597106651/job/68716719981",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23597106651/job/68716753638",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23597106651/job/68716753638",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23600095193/job/68727410750",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23600095193/job/68727410750",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23600095193/job/68727441058",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23600095193/job/68727441058",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23600095193/job/68727493582",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23600095193/job/68727493582",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23602939748/job/68737721113",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23602939748/job/68737721113",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23602939748/job/68737748381",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23602939748/job/68737748381",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update_repo_status",
-          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23602939748/job/68737809686",
-          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23602939748/job/68737809686",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605769092/job/68748060698",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/23605769092/job/68748060698",
           "status": "in_progress",
           "conclusion": null
         }
       ],
       "latest_commit_combined_check_runs_status": "success",
       "in_weekly_release": false,
-      "latest_release_tag": "v1.0.41",
-      "latest_release_name": "v1.0.41",
-      "latest_release_url": "https://github.com/NHSDigital/eps-repo-status/releases/tag/v1.0.41",
-      "latest_release_published_at": "2026-03-25T17:59:44",
+      "latest_release_tag": "v1.0.42",
+      "latest_release_name": "v1.0.42",
+      "latest_release_url": "https://github.com/NHSDigital/eps-repo-status/releases/tag/v1.0.42",
+      "latest_release_published_at": "2026-03-26T16:26:57",
       "latest_prod_tag": null,
       "latest_prod_release_datetime": null,
       "latest_dev_tag": null,
