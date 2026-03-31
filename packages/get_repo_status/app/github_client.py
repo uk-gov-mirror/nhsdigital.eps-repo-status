@@ -263,6 +263,17 @@ class GithubDataClient:
         args = build.get("args") if isinstance(build, dict) else None
         image_name = args.get("IMAGE_NAME") if isinstance(args, dict) else None
         image_version = args.get("IMAGE_VERSION") if isinstance(args, dict) else None
+        if not image_name or not image_version:
+            dockerfile_content = self.get_text_file_from_repo(repo_name, ".devcontainer/Dockerfile", ref)
+            if dockerfile_content:
+                for line in dockerfile_content.splitlines():
+                    if line.startswith("FROM"):
+                        parts = line.split(":")
+                        if len(parts) == 2:
+                            image_name = parts[0].replace("FROM ", "").strip()
+                            image_name = image_name.replace("ghcr.io/nhsdigital/eps-devcontainers/", "").strip()
+                            image_version = parts[1].strip()
+
         return {
             "IMAGE_NAME": image_name or "n/a",
             "IMAGE_VERSION": image_version or "n/a",
