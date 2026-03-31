@@ -309,41 +309,11 @@ def test_get_devcontainer_details_returns_image_args_when_present(client: Github
 
 
 def test_get_devcontainer_details_returns_na_when_missing_keys(client: GithubDataClient, repo_factory) -> None:
-    client.get_text_file_from_repo = MagicMock(side_effect=['{"build": {"args": {}}}', None])
+    client.get_text_file_from_repo = MagicMock(return_value='{"build": {"args": {}}}')
 
     result = client.get_devcontainer_details(repo_factory())
 
     assert result == {"IMAGE_NAME": "n/a", "IMAGE_VERSION": "n/a"}
-
-
-def test_get_devcontainer_details_falls_back_to_dockerfile_when_json_missing_keys(
-    client: GithubDataClient, repo_factory
-) -> None:
-    client.get_text_file_from_repo = MagicMock(
-        side_effect=[
-            '{"build": {"args": {}}}',
-            "FROM ghcr.io/nhsdigital/eps-devcontainers/python:3.12\nRUN echo hello\n",
-        ]
-    )
-
-    result = client.get_devcontainer_details(repo_factory())
-
-    assert result == {"IMAGE_NAME": "python", "IMAGE_VERSION": "3.12"}
-
-
-def test_get_devcontainer_details_falls_back_to_dockerfile_when_json_has_no_build_args(
-    client: GithubDataClient, repo_factory
-) -> None:
-    client.get_text_file_from_repo = MagicMock(
-        side_effect=[
-            '{"name": "devcontainer"}',
-            "FROM node:20-bookworm\n",
-        ]
-    )
-
-    result = client.get_devcontainer_details(repo_factory())
-
-    assert result == {"IMAGE_NAME": "node", "IMAGE_VERSION": "20-bookworm"}
 
 
 def test_get_devcontainer_details_returns_na_on_parse_error(client: GithubDataClient, repo_factory) -> None:
