@@ -3,11 +3,19 @@
 #########################################################################
 
 version: 2
+registries:
+  ghcr-nhsdigital:
+    type: docker-registry
+    url: ghcr.io
+    username: x-access-token
+    password: ${{secrets.DEPENDABOT_TOKEN}}
 
 updates:
   - package-ecosystem: "docker"
     directory: "/.devcontainer"
     rebase-strategy: "disabled"
+    registries:
+      - ghcr-nhsdigital
     schedule:
       interval: "weekly"
       day: "thursday"
