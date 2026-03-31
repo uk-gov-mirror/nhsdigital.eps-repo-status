@@ -37,3 +37,4 @@ token = get_bot_token\(\)
 "AWS_ACCOUNT_ID": "123456789012"
 def from_token
 token = os\.getenv
+password: \${{secrets\.DEPENDABOT_TOKEN}}

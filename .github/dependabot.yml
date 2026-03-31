@@ -3,6 +3,12 @@
 #########################################################################
 
 version: 2
+registries:
+  ghcr-nhsdigital:
+    type: docker-registry
+    url: ghcr.io
+    username: x-access-token
+    password: ${{secrets.DEPENDABOT_TOKEN}}
 
 updates:
   - package-ecosystem: "github-actions"
