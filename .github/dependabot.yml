@@ -5,6 +5,18 @@
 version: 2
 
 updates:
+  - package-ecosystem: "docker"
+    directory: ".devcontainer"
+    rebase-strategy: "disabled"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "20:00" #UTC
+    open-pull-requests-limit: 20
+    commit-message:
+      prefix: "Upgrade: [dependabot] - "
+    cooldown:
+      default-days: 1
   - package-ecosystem: "github-actions"
     # Workflow files stored in the
     # default location of `.github/workflows`
