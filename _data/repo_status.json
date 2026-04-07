@@ -1,5 +1,5 @@
 {
-  "generated_date_time": "2026-04-07T01:48:16",
+  "generated_date_time": "2026-04-07T03:18:52",
   "repos": [
     {
       "repo_url": "NHSDigital/electronic-prescription-service-api",
@@ -1357,6 +1357,34 @@
           "status_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24035494335/job/70093965137",
           "status": "completed",
           "conclusion": "success"
+        },
+        {
+          "name": "get_config_values / get_config_values",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180549058",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180549058",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "get_config_values / verify_attestation",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180564321",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180564321",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "delete-old-proxygen-deployments",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180586064",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180586064",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180586155",
+          "status_url": "https://github.com/NHSDigital/electronic-prescription-service-clinical-prescription-tracker/actions/runs/24062201600/job/70180586155",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "latest_commit_combined_check_runs_status": "success",
@@ -1511,6 +1539,13 @@
           "name": "delete-old-cloudformation-stacks",
           "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/24058912434/job/70170899366",
           "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/24058912434/job/70170899366",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/24060627889/job/70175989722",
+          "status_url": "https://github.com/NHSDigital/eps-prescription-tracker-ui/actions/runs/24060627889/job/70175989722",
           "status": "completed",
           "conclusion": "success"
         }
@@ -2707,6 +2742,13 @@
           "status_url": "https://github.com/NHSDigital/eps-aws-dashboards/actions/runs/24035655147/job/70094470444",
           "status": "completed",
           "conclusion": "success"
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-aws-dashboards/actions/runs/24062370026/job/70181074909",
+          "status_url": "https://github.com/NHSDigital/eps-aws-dashboards/actions/runs/24062370026/job/70181074909",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "latest_commit_combined_check_runs_status": "success",
@@ -2756,115 +2798,66 @@
       "high_code_scanning_alerts": -1,
       "medium_code_scanning_alerts": -1,
       "low_code_scanning_alerts": -1,
-      "ci_workflow_status": "success",
-      "ci_workflow_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265",
+      "ci_workflow_status": "in_progress",
+      "ci_workflow_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709",
       "release_workflow_status": "success",
       "release_workflow_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/21669047656",
       "latest_commit_check_runs": [
         {
-          "name": "SonarCloud Code Analysis",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/runs/69538437403",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/runs/69538437403",
-          "status": "completed",
-          "conclusion": "failure"
-        },
-        {
           "name": "get_config_values / get_config_values",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537806195",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537806195",
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181070797",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181070797",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "get_config_values / verify_attestation",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537826745",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537826745",
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181083254",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181083254",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "quality_checks / quality_checks",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537907223",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537907223",
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181101406",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181101406",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "quality_checks / IaC-validation",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537907224",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537907224",
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181101413",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181101413",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "quality_checks / get_docker_images_to_scan",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537907278",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69537907278",
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181101427",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181101427",
           "status": "completed",
           "conclusion": "success"
         },
         {
           "name": "quality_checks / docker_vulnerability_scan",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538350440",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538350440",
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181251107",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181251107",
           "status": "completed",
           "conclusion": "skipped"
         },
         {
           "name": "create_artefact",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538448775",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538448775",
-          "status": "completed",
-          "conclusion": "success"
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181363827",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24062368709/job/70181363827",
+          "status": "in_progress",
+          "conclusion": null
         },
         {
-          "name": "deployment (storage, veit)",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767653",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767653",
+          "name": "SonarCloud Code Analysis",
+          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/runs/70181359607",
+          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/runs/70181359607",
           "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "deployment (archive, veit)",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767665",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767665",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "deployment (archive, dev)",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767721",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767721",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "deployment (storage, dev)",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767754",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69538767754",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "smoke_tests",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69539736673",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23852918265/job/69539736673",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "update-devcontainer-version",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23887401515/job/69653020718",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/23887401515/job/69653020718",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "sync-copilot-instructions",
-          "html_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24022033032/job/70052720501",
-          "status_url": "https://github.com/NHSDigital/eps-storage-terraform/actions/runs/24022033032/job/70052720501",
-          "status": "completed",
-          "conclusion": "success"
+          "conclusion": "failure"
         }
       ],
       "latest_commit_combined_check_runs_status": "failure",
@@ -2895,7 +2888,7 @@
       ],
       "devcontainer_image_name": "eps-storage-terraform",
       "devcontainer_image_version": "v1.2.0",
-      "commits_since_last_release": 70,
+      "commits_since_last_release": 71,
       "main_branch": "main",
       "fork_pr_contributor_approval": "Error"
     },
@@ -3125,6 +3118,13 @@
           "status_url": "https://github.com/NHSDigital/eps-assist-me/actions/runs/24045680386/job/70131281668",
           "status": "waiting",
           "conclusion": null
+        },
+        {
+          "name": "delete-old-cloudformation-stacks",
+          "html_url": "https://github.com/NHSDigital/eps-assist-me/actions/runs/24062144761/job/70180369991",
+          "status_url": "https://github.com/NHSDigital/eps-assist-me/actions/runs/24062144761/job/70180369991",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "latest_commit_combined_check_runs_status": "success",
@@ -6234,6 +6234,27 @@
           "name": "update_repo_status",
           "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24059933870/job/70173981591",
           "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24059933870/job/70173981591",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "get_config_values / get_config_values",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24062276507/job/70180780899",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24062276507/job/70180780899",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "get_config_values / verify_attestation",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24062276507/job/70180792923",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24062276507/job/70180792923",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "update_repo_status",
+          "html_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24062276507/job/70180818221",
+          "status_url": "https://github.com/NHSDigital/eps-repo-status/actions/runs/24062276507/job/70180818221",
           "status": "in_progress",
           "conclusion": null
         }
