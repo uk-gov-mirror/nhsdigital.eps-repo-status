@@ -1,0 +1,9 @@
+rules:
+  unpinned-images:
+    # these workflows use unpinned images because they are using a full image passed in that contains the tag
+    ignore:
+      - update_repo_status_data.yml:21:7
+  secrets-outside-env:
+    # these are ignored because they are using known secrets
+    ignore:
+      - update_repo_status_data.yml:46:28

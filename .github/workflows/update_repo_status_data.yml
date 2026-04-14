@@ -4,9 +4,15 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"
+permissions: {}
+
 jobs:
   get_config_values:
     uses: NHSDigital/eps-common-workflows/.github/workflows/get-repo-config.yml@e798d5aee897de6f7dc387dd5623fcd9ba4c8929
+    permissions:
+      attestations: read
+      contents: read
+      packages: read
 
   update_repo_status:
     runs-on: ubuntu-22.04
@@ -26,6 +32,8 @@ jobs:
           cp /home/vscode/.tool-versions "$HOME/.tool-versions"
       - name: Checkout code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
 
       - name: make install
         run: |
@@ -49,6 +57,7 @@ jobs:
       - name: Checkout gh-pages
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
+          persist-credentials: true
           ref: gh-pages
           path: gh-pages
 
