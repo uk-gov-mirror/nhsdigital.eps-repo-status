@@ -2,6 +2,7 @@
 
 import importlib
 import json
+from pathlib import Path
 
 import pytest
 
@@ -85,7 +86,7 @@ def test_parse_repos_payload_rejects_invalid_shape():
         repo_status._parse_repos_payload({"notRepos": []})
 
 
-def test_load_repo_configs_from_repo_status_repo():
+def test_load_repo_configs_from_local_repos_file(tmp_path: Path):
     payload = {
         "repos": [
             {
@@ -99,13 +100,20 @@ def test_load_repo_configs_from_repo_status_repo():
             }
         ]
     }
+    root_repos_file = Path(__file__).resolve().parents[3] / "repos.json"
+    original_content = root_repos_file.read_text(encoding="utf-8")
+    root_repos_file.write_text(json.dumps(payload), encoding="utf-8")
+
     fake_github = FakeGithub(payload)
     loader = RepoStatusLoader(fake_github)  # type: ignore[arg-type]
 
-    result = loader.load_repo_configs()
+    try:
+        result = loader.load_repo_configs()
+    finally:
+        root_repos_file.write_text(original_content, encoding="utf-8")
 
-    assert fake_github.requested_repo_name == "NHSDigital/eps-repo-status"
-    assert fake_github._repo.last_get_contents_args == ("repos.json", "main")
+    assert fake_github.requested_repo_name is None
+    assert fake_github._repo.last_get_contents_args is None
     assert result[0].repoUrl == "NHSDigital/repo-one"
     assert result[0].mainBranch == "main"
     assert result[0].setTargetSpineServers is True

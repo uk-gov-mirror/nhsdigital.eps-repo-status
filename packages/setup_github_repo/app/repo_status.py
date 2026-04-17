@@ -1,6 +1,7 @@
 """Repository status parsing and loading utilities for eps-repo-status data."""
 
 import json
+from pathlib import Path
 from typing import Any
 
 from github import Github
@@ -78,14 +79,13 @@ def _parse_repos_payload(payload: Any) -> list[RepoConfig]:
 
 
 class RepoStatusLoader:
-    """Load repository setup configuration from NHSDigital/eps-repo-status."""
+    """Load repository setup configuration from the local repos.json file."""
 
     def __init__(self, github: Github):
         self._github = github
 
     def load_repo_configs(self) -> list[RepoConfig]:
-        print("Loading repo configuration from NHSDigital/eps-repo-status")
-        repo = self._github.get_repo("NHSDigital/eps-repo-status")
-        content_file = repo.get_contents("repos.json", ref="main")
-        payload = json.loads(content_file.decoded_content.decode("utf-8"))
+        repos_path = Path(__file__).resolve().parents[3] / "repos.json"
+        print(f"Loading repo configuration from local file: {repos_path}")
+        payload = json.loads(repos_path.read_text(encoding="utf-8"))
         return _parse_repos_payload(payload)
