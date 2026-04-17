@@ -1,7 +1,7 @@
 """Compatibility wrapper for the refactored GitHub repository setup package.
 
 Usage remains the same:
-    poetry run python scripts/set_github_secrets.py --gh_auth_token "$GH_TOKEN"
+    poetry run python scripts/setup_github_repos.py --gh_auth_token "$GH_TOKEN"
 
 You can also run without passing a token; the CLI will use `gh auth token`
 and fall back to `gh auth login` when needed.
