@@ -109,7 +109,6 @@ class GithubSecretManager(GithubOperationBase):
         self._set_role_secrets(repo=repo, roles=secrets.prod_roles, env_name="PROD", set_dependabot=False)
         self._set_role_secrets(repo=repo, roles=secrets.qa_roles, env_name="QA", set_dependabot=False)
         self._set_role_secrets(repo=repo, roles=secrets.ref_roles, env_name="REF", set_dependabot=False)
-        self._set_role_secrets(repo=repo, roles=secrets.ref_roles, env_name="REF", set_dependabot=False)
         self._set_role_secrets(
             repo=repo,
             roles=secrets.recovery_roles,
