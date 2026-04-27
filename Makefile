@@ -13,6 +13,7 @@ deep-clean: clean
 
 test:
 	cd packages/get_repo_status && COVERAGE_FILE=coverage/.coverage poetry run python -m pytest
+	COVERAGE_FILE=packages/setup_github_repo/coverage/.coverage poetry run python -m pytest -c packages/setup_github_repo/pytest.ini packages/setup_github_repo
 
 lint: lint-black lint-flake8
 
