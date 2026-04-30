@@ -280,6 +280,23 @@
     "isEchoRepo": true
   },
   {
+    "repoUrl": "NHSDigital/eps-storage-resources",
+    "friendlyName": "eps storage resources",
+    "ciWorkflow": "ci.yml",
+    "releaseWorkflow": "release.yml",
+    "mainBranch": "main",
+    "inWeeklyRelease": true,
+    "releaseFiles": [
+      "_latest.csv"
+    ],
+    "isApiRepo": false,
+    "isSpineRepo": false,
+    "setTargetSpineServers": false,
+    "isAccountResources": false,
+    "setTargetServiceSearchServers": false,
+    "isEchoRepo": false
+  },
+  {
     "repoUrl": "NHSDigital/eps-cdk-utils",
     "friendlyName": "eps cdk utils",
     "ciWorkflow": "ci.yml",
